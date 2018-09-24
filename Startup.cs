@@ -33,7 +33,7 @@ namespace vsCode
 
             app.Run (context =>
             {
-                context.Response.Redirect ("/Index/index.html");
+                context.Response.Redirect ("/index.html");
                 return Task.FromResult (0);
             });
         }
@@ -42,7 +42,7 @@ namespace vsCode
         public class AppHost : AppHostBase
     {
         // Initializes your AppHost Instance, with the Service Name and assembly containing the Services
-        public AppHost() : base("Test API", typeof(Request).Assembly) {}
+        public AppHost() : base("Test API", typeof(vsCode.Requests.Request).Assembly) {}
 
         // Configure your AppHost with the necessary configuration and dependencies your App needs
         
