@@ -1,42 +1,22 @@
-﻿using System;
-using Application.N.Shit;
-using static System.Console;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using ServiceStack;
+
 namespace vsCode
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        private static IWebHost BuildWebHost(string[] args)
         {
-            var jason = new Person("Jason", "Malley", new DateTime(1982, 11, 10));
+            return WebHost
+                .CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .Build();
+        }
 
-            Console.WriteLine($"Welcome, {jason.FirstName}");
-            Console.WriteLine($"Our records indicate that you were born on {jason.Birthdate.ToShortDateString()}");
-
-            var theCorrectAnswer = false;
-            while (!theCorrectAnswer)
-            {
-                Console.WriteLine("Is this correct.");
-                var entry = Console.ReadLine();
-                switch (entry.ToUpper())
-                {
-                    case "YES":
-                        theCorrectAnswer = true;
-                        break;
-                    case "EXIT":
-                        return;
-                }
-
-                WriteLine("why don't you try again.");
-            }
-
-            WriteLine("That's more like it");
-
-            Console.Clear();
-            WriteLine("What would you like to do today?");
-            var input = Console.ReadLine();
-            var processedInput = ActivityCalculator.AnalyzeEntry(input);
-            WriteLine(processedInput);
-
+        static void Main(string[] args = null)
+        {
+            BuildWebHost(args).Run();
         }
     }
 }

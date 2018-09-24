@@ -1,0 +1,4 @@
+C:\Users\jmalley\Documents\Workspace\vsCode\obj\Debug\netcoreapp2.0\vsCode.csprojAssemblyReference.cache
+C:\Users\jmalley\Documents\Workspace\vsCode\obj\Debug\netcoreapp2.0\vsCode.csproj.CoreCompileInputs.cache
+C:\Users\jmalley\Documents\Workspace\vsCode\obj\Debug\netcoreapp2.0\vsCode.AssemblyInfoInputs.cache
+C:\Users\jmalley\Documents\Workspace\vsCode\obj\Debug\netcoreapp2.0\vsCode.AssemblyInfo.cs
